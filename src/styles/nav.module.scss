@@ -1,0 +1,50 @@
+.header{
+    position: fixed;
+    width: 35%;
+    padding: 6em 3em 3em;
+    background-color: #0b0a0a;
+    height: 100vh;
+    text-transform: uppercase;
+    text-align: center;
+    box-shadow: 3px 3px 5px 6px #ccc; 
+
+    h1{
+        font-size: 1.1em;
+        color: white;
+    }
+
+    ul{
+        list-style: none;
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+
+        li{
+            padding: 0 0 15px;
+
+            a{
+                color: #eee;
+                list-style-type: none;
+                text-decoration: none;
+
+                &:hover{
+                    color: #c2c2c2;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    color: white;
+    margin-top: 4rem;
+
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+
+        svg{
+            font-size: 2rem;
+        }
+    }
+}

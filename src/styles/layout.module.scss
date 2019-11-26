@@ -1,0 +1,15 @@
+.container {
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main{
+    margin-left: 35%;
+    max-width: none;
+    padding: 6em 3em 3em;
+    width: 70%;
+}
