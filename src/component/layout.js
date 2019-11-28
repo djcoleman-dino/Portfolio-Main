@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from './nav';
+import Header from './header';
 import '../styles/index.scss';
 import layoutStyles from '../styles/layout.module.scss';
 
@@ -8,7 +8,7 @@ const Layout = (props) => {
     return (
         <div className={layoutStyles.container}>
             <div className={layoutStyles.content}>
-                <Nav/>
+                <Header/>
                 <div className={layoutStyles.main}>
                     {props.children}
                 </div>

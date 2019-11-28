@@ -2,11 +2,13 @@ import React from "react"
 import Layout from "../component/layout"
 
 import '../styles/contact.scss'
+import Head from "../component/head"
 
 
 const Contact = () => {
     return (
         <Layout>
+            <Head title="Contact" />
             <h1>Contact</h1>
             <p>I have experience as a Full-Stack developer and have worked on a variety of websites.</p>
             <p>If you need help with full-stack development ( mostly React.js, Node.js) or if you would like more information, send me an email at <a href="#">info@docoleman.com</a></p>

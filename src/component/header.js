@@ -6,7 +6,7 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 import navStyle from '../styles/nav.module.scss';
 
-const Nav = () => {
+const Header = () => {
     return (
         <div className={navStyle.header}>
             <h1>Navigation</h1>
@@ -50,4 +50,4 @@ const Nav = () => {
     )
 }
 
-export default Nav;
+export default Header;
