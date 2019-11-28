@@ -1,5 +1,8 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import Img from "gatsby-image";
+
+import '../styles/work.scss';
 
 import Layout from "../component/layout"
 import Head from "../component/head";
@@ -15,6 +18,11 @@ const Work = props => {
                         title
                         slug
                         description
+                        image {
+                            fluid(maxWidth: 400, maxHeight: 400){
+                                src
+                            }
+                        }
                     }
                 }
             }
@@ -25,19 +33,22 @@ const Work = props => {
         <Layout>
             <Head title="Work" />
             <h1>Work</h1>
-            <ol>
-                {data.allContentfulProjects.edges.map((edge) => {
-                    return (
-                        <li key={edge.node.id}>
+            <p>Here is a small collection of projects that I've worked on over the past five years. Every project is tagged with my role in the project (such as design or development).</p>
+                <div className="card-container">
+                    {data.allContentfulProjects.edges.map((edge) => {
+                        return (
                             <Link to={`/work/${edge.node.slug}`}>
-                                <h2>{edge.node.title}</h2>
-                                <p>{edge.node.description}</p>
+                                <div className="card" key={edge.node.id}>
+                                    <Img className="card-img-top" alt="top" fluid={edge.node.image.fluid} />
+                                    <div className="card-body">
+                                        <h1 className="card-title">{edge.node.title}</h1>
+                                        <p className="card-text">{edge.node.description}</p>
+                                    </div>
+                                </div>
                             </Link>
-                        </li>
-                    )
-                })}
-
-            </ol>
+                        )
+                    })}
+                </div>
         </Layout>
     )
 }
