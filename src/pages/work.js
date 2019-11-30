@@ -32,8 +32,8 @@ const Work = props => {
     return (
         <Layout>
             <Head title="Work" />
-            <h1>Work</h1>
-            <p>Here is a small collection of projects that I've worked on over the past five years. Every project is tagged with my role in the project (such as design or development).</p>
+            <h1 className="h1-top">Work</h1>
+            <p>Here is a small collection of projects that I've worked on over the year.</p>
                 <div className="card-container">
                     {data.allContentfulProjects.edges.map((edge) => {
                         return (
@@ -42,6 +42,7 @@ const Work = props => {
                                     <Img className="card-img-top" alt="top" fluid={edge.node.image.fluid} />
                                     <div className="card-body">
                                         <h1 className="card-title">{edge.node.title}</h1>
+                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                                         <p className="card-text">{edge.node.description}</p>
                                     </div>
                                 </div>

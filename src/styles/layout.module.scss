@@ -5,6 +5,10 @@
 .content {
     display: flex;
     flex-grow: 1;
+
+    @media(max-width:900px){
+        display: block;
+    }
 }
 
 .main{
@@ -12,4 +16,10 @@
     max-width: none;
     padding: 6em 3em 3em;
     width: 70%;
+
+    @media(max-width: 900px){
+        margin: 0;
+        padding: 3em 2em;
+        width: 100%;
+    }
 }

@@ -7,7 +7,7 @@ const Blog = () => {
     return (
         <Layout>
             <Head title="Blog" />
-            <h1>Blog</h1>
+            <h1 className="h1-top">Blog</h1>
         </Layout>
     )
 }

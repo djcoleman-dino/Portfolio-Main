@@ -9,11 +9,14 @@ const Home = () => {
     return (
         <Layout>
             <Head title="Home" />
-            <h1>Hi, I'm Donald</h1>
-            <p>I'm a Full-Stack developer</p>
+            <div className="home-content">
+                <h1 className="h1-top">Hi, I'm Donald</h1>
+                <p>Currently, I am a Full-Stack Web Developer student at Lambda School.</p>
+                <p>I enjoy turning complex problems into beautiful functional websites. When I'm not coding or watching tutorials, you'll find me reading finance books/blogs, eating or traveling.</p>
 
-            <h2>Let's Work Together</h2>
-            <p>Interested in working together? Check out the <Link to="/contact">Contact Me</Link> page and get in touch.</p>
+                <h4>Let's Work Together</h4>
+                <p>Interested in working together? Check out the <Link to="/contact">Contact Me</Link> page and get in touch.</p>
+            </div>
         </Layout>
     )
 }

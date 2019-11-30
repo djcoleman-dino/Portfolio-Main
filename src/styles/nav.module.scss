@@ -9,7 +9,8 @@
     box-shadow: 3px 3px 5px 6px #ccc; 
 
     h1{
-        font-size: 1.1em;
+        font-size: 1.5em;
+        margin-bottom: 2rem;
         color: white;
     }
 
@@ -26,11 +27,27 @@
                 color: #eee;
                 list-style-type: none;
                 text-decoration: none;
+                font-size: 1.2rem;
 
                 &:hover{
                     color: #c2c2c2;
                 }
             }
+        }
+    }
+
+    @media(max-width:900px){
+        width: 100%;
+        position: static;
+        padding: 2em;
+        height: 30%;
+
+        h1{
+            margin-bottom: 1rem;
+        }
+
+        li{
+            padding: 0 !important;
         }
     }
 }
@@ -46,5 +63,9 @@
         svg{
             font-size: 2rem;
         }
+    }
+
+    @media(max-width:900px){
+       margin-top: 2rem;
     }
 }

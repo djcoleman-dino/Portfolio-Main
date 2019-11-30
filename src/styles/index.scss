@@ -1,3 +1,4 @@
+// Reset styles
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -623,4 +624,18 @@ html {
     html {
       font-size: 100%;
     }
+  }
+
+  // index page styles
+  .home-content{
+
+    p{
+      vertical-align: baseline;
+      width: 40em;
+    }
+    
+  }
+  
+  .h1-top{
+    margin-bottom: 2rem;
   }
