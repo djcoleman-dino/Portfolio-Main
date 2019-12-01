@@ -17,6 +17,7 @@ const Work = props => {
                         id
                         title
                         slug
+                        subtitle
                         description
                         image {
                             fluid(maxWidth: 400, maxHeight: 400){
@@ -32,23 +33,26 @@ const Work = props => {
     return (
         <Layout>
             <Head title="Work" />
-            <h1 className="h1-top">Work</h1>
-            <p>Here is a small collection of projects that I've worked on over the year.</p>
-                <div className="card-container">
-                    {data.allContentfulProjects.edges.map((edge) => {
-                        return (
-                            <Link to={`/work/${edge.node.slug}`}>
-                                <div className="card" key={edge.node.id}>
-                                    <Img className="card-img-top" alt="top" fluid={edge.node.image.fluid} />
-                                    <div className="card-body">
-                                        <h1 className="card-title">{edge.node.title}</h1>
-                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                        <p className="card-text">{edge.node.description}</p>
+            <div className="work-page">
+                <h1 className="h1-top">Work</h1>
+                <p>Here is a small collection of projects that I've worked on over the past year.</p>
+                <p>Will be updating project as my skills progress.</p>
+                    <div className="card-container">
+                        {data.allContentfulProjects.edges.map((edge) => {
+                            return (
+                                <Link to={`/work/${edge.node.slug}`}>
+                                    <div className="card" key={edge.node.id}>
+                                        <Img className="card-img-top" alt="top" fluid={edge.node.image.fluid} />
+                                        <div className="card-body">
+                                            <h1 className="card-title">{edge.node.title}</h1>
+                                            <p className="card-subtitle mb-2 text-muted">{edge.node.subtitle}</p>
+                                            <p className="card-text">{edge.node.description}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </Link>
-                        )
-                    })}
+                                </Link>
+                            )
+                        })}
+                    </div>
                 </div>
         </Layout>
     )
