@@ -29,12 +29,15 @@ const Blog = () => {
             <Head title="Blog" />
             <div className="blog-page">
                 <h1 className="h1-top">Blog</h1>
+                <p>This is where I write about topics that interests me such as programming, side projects, and finance.</p>
+
+                <h3>Recent Posts</h3>
                 <ol>
                 {data.allContentfulBlogPost.edges.map((edge) => {
                     return (
                         <li key={edge.node.id}>
                             <Link to={`/blog/${edge.node.slug}`}>    
-                                <h2>{edge.node.title}</h2>
+                                <h4>{edge.node.title}</h4>
                                 <p>{edge.node.publishedDate}</p>
                             </Link>
                         </li>

@@ -11,7 +11,7 @@ import Head from "../component/head";
 const Work = props => {
     const data = useStaticQuery(graphql`
         query {
-            allContentfulProjects {
+            allContentfulProjects(sort: { fields: [createdAt], order: ASC }) {
                 edges {
                     node {
                         id
