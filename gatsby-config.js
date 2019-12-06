@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -12,7 +13,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
     },
-    'gatsby-plugin-sass',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

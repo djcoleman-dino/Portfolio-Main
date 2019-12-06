@@ -1,24 +1,31 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from "gatsby-image";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 import Head from "../component/head";
 import '../styles/blog.scss'
 
 export const query = graphql`
-    query($slug: String!) {
+    query Post ($slug: String!) {
         contentfulBlogPost(slug: {eq: $slug}) {
             title
             publishedDate(formatString: "MMMM Do, YYYY")
+            image {
+                fluid(maxWidth: 400, maxHeight: 400){
+                    src
+                }
+            }
             body {
                 json
             }
         }
     }
-
 `
 
+
 const Blog = (props) => {
+
     const options = {
         renderNode: {
             "embedded-asset-block": (node) => {
@@ -28,7 +35,7 @@ const Blog = (props) => {
             }
         }
     }
-
+    
     return (
         <div className="blog-main">
             <Head title={props.data.contentfulBlogPost.title} />
@@ -42,6 +49,20 @@ const Blog = (props) => {
                 <section>
                     {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
                 </section>
+                <footer>
+                    <hr/>
+                    <div className="bottom-footer">
+                            <div>
+                                <Img fluid={props.data.contentfulBlogPost.image.fluid} />
+                            </div>
+                            <div>
+                                <p>WRITTEN BY</p>
+                                <h3>Donald Coleman</h3>
+                                <p>Full Stack Web Developer Student @ Lambda School</p>
+
+                            </div>
+                    </div>
+                </footer>
 
             </article>
         </div>
@@ -49,3 +70,5 @@ const Blog = (props) => {
 }
 
 export default Blog;
+
+

@@ -10,7 +10,6 @@ export const query = graphql`
         contentfulProjects(slug: {eq: $slug}) {
             title
             description
-            link
             body {
                 json
             }
