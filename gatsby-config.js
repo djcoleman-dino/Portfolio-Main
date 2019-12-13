@@ -24,6 +24,12 @@ module.exports = {
         display: `standalone`,
         icon: `static/logo.png`,
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-154561948-1",
+      },
+    },
   ]
 }
