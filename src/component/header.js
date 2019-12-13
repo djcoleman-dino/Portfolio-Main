@@ -40,7 +40,7 @@ const Header = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="djcoleman477@gmail.com">
+                        <a href="mailto: djcoleman477@gmail.com">
                             <MailOutlineIcon>Icon</MailOutlineIcon>
                         </a>
                     </li>
