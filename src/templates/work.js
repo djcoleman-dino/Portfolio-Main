@@ -10,7 +10,6 @@ export const query = graphql`
         contentfulProjects(slug: {eq: $slug}) {
             title
             description
-            link
             body {
                 json
             }
@@ -32,6 +31,8 @@ const Work = (props) => {
     return (
         <Layout>
             <Head title={props.data.contentfulProjects.title} />
+            <h1>{props.data.contentfulProjects.title}</h1>
+            <p>{props.data.contentfulProjects.description}</p>
             <div className="json-body">
             {documentToReactComponents(props.data.contentfulProjects.body.json, options)}
             </div>
@@ -40,6 +41,3 @@ const Work = (props) => {
 }
 
 export default Work
-
-/* <h1>{props.data.contentfulProjects.title}</h1>
-<p>{props.data.contentfulProjects.description}</p> */

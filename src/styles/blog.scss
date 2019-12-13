@@ -1,6 +1,11 @@
 .blog-page{
     width: 90%;
 
+    h3{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
     ol{
         list-style-type: none;
         margin: 0 auto;
@@ -19,7 +24,117 @@
                 color: black;
                 text-decoration: none;
 
+                h4{
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+
+                p{
+                    color: #515050;
+                    font-size: 0.75rem;
+                }
+
             }
         }
+    }
+}
+
+.blog-main{
+    margin-left: 35%;
+    max-width: 54em;
+    padding: 8em 4em 4em;
+    height: 100%;
+    max-height: 100%;
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: Open Sans,sans-serif;
+    letter-spacing: .01rem;
+    font-size: 1.8rem;
+    line-height: 1.75em;
+    color: #616161;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    text-rendering: geometricPrecision;
+    margin: 0 auto;
+    padding: 0;
+
+    @media(max-width:500px) {
+        padding: 10px;
+        
+        article{
+            max-width: 500px !important;
+            margin: 0 !important;
+
+            section{
+                width: 470px !important;
+            }
+        }
+    }
+
+    article{
+        position: relative;
+        max-width: 710px;
+        margin: 4rem auto;
+        word-wrap: break-word;
+
+        header{
+            h1{
+                color: #323232;
+                font-size: 2rem;
+                font-weight: 400;
+            }
+
+            section > p{
+                margin: 0;
+                color: gray;
+                font-size: .8rem;
+            }
+        }
+
+        section{
+            width: 700px;
+            color: #191919;
+            line-height: 2rem;
+            margin-top: 1rem;
+
+            h2{
+                font-weight: 400;
+                font-size: 1.5rem;
+            }
+
+            li{
+                font-size: 0.5em !important;
+                margin-bottom: 0 !important;
+            }
+
+            hr{
+                text-align: center;
+                border: none;
+                margin: 3rem;
+                letter-spacing: 1.6rem;
+                margin: 1rem 0 3rem 0;
+
+                &:before{
+                    content: "...";
+                }
+            }
+        }
+    }
+}
+
+.bottom-footer{
+    display: flex;
+    line-height: 1rem;
+
+    p{
+        margin-bottom: 0;
+        font-size: 0.75rem;
+    }
+
+    img{
+        width: 5rem !important;
+        margin-right: 1rem;
+        position: relative !important;
     }
 }
