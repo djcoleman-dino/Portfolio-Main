@@ -72,6 +72,19 @@
         }
     }
 
+    @media(max-width:420px) {
+        padding: 10px;
+        
+        article{
+            max-width: 350px !important;
+            margin: 0 !important;
+
+            section{
+                width: 350px !important;
+            }
+        }
+    }
+
     article{
         position: relative;
         max-width: 710px;
