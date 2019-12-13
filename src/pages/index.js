@@ -11,7 +11,7 @@ const Home = () => {
             <Head title="Home" />
             <div className="home-content">
                 <h1 className="h1-top">Hi, I'm Donald (DJ)</h1>
-                <p>Currently, I am a Full-Stack Web Developer student at Lambda School.</p>
+                <p>I am a Full-Stack Web Developer. Currently attending Lambda School.</p>
                 <p>I enjoy turning complex problems into beautiful functional websites. When I'm not coding or watching tutorials, you'll find me reading finance books/blogs, drinking coffee or traveling.</p>
 
                 <div className="home-skills">
