@@ -18,11 +18,11 @@ const Head = ({ title }) => {
     }
   `)
 
-  const defaults = data.site.siteMetadata.title
+  const defaults = data.site.siteMetadata
 
   return (
     <Helmet
-      title={`${title} | ${defaults}`}
+      title={`${title} | ${defaults.title}`}
       link={{
         rel: "icon",
         type: "image/png",
