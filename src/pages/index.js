@@ -7,7 +7,7 @@ import Head from "../component/head"
 const Home = () => {
   return (
     <Layout>
-      <Head title="DJ" />
+      <Head title="Home" />
       <div className="home-content">
         <h1 className="h1-top">Donald (DJ) Coleman</h1>
         <p>

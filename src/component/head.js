@@ -18,11 +18,11 @@ const Head = ({ title }) => {
     }
   `)
 
-  const defaults = data.site.siteMetadata
+  const defaults = data.site.siteMetadata.title
 
   return (
     <Helmet
-      title={`${title} | ${defaults.title}`}
+      title={`${title} | ${defaults}`}
       link={{
         rel: "icon",
         type: "image/png",
@@ -37,6 +37,7 @@ const Head = ({ title }) => {
       <meta property="og:url" content={`${defaults.baseUrl}`} />
       <meta property="og:title" content={`${title}`} />
       <meta property="og:description" content={`${defaults.description}`} />
+      <meta property="og:type" content="article" />
       <meta property="og:image" content={`${logo}`} />
 
       <meta name="twitter:card" content="summary_large_image" />

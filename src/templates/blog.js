@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Helmet } from "react-helmet"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import Head from "../component/head"
@@ -37,9 +36,6 @@ const Blog = props => {
 
   return (
     <>
-      <Helmet>
-        <meta property="og:type" content="article" />
-      </Helmet>
       <div className="blog-main">
         <Head title={props.data.contentfulBlogPost.title} />
         <article>
